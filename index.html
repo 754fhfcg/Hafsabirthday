@@ -4,165 +4,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>عيد ميلاد Hafsa</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Amiri', serif;
-  background: linear-gradient(to top left, #ffdde1, #f8cdda);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100vh;
-  overflow: hidden;
-  text-align: center;
-  padding-top: 40px;
-  position: relative;
-}
-h1 {
-  font-size: 1.8em;
-  color: #c2185b;
-  margin-bottom: 0.5em;
-}
-#countdown {
-  font-size: 3em;
-  color: #ffffff;
-  background: linear-gradient(145deg, #f06292, #ec407a);
-  padding: 25px 40px;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(240, 98, 146, 0.5);
-  margin-top: 20px;
-}
-.confetti, .sparkle {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.confetti {
-  background-color: #e91e63;
-  animation: fall 5s linear infinite;
-}
-.sparkle {
-  background: white;
-  animation: sparkle 2s infinite;
-}
-@keyframes fall {
-  0% {transform: translateY(-100px); opacity: 1;}
-  100% {transform: translateY(100vh); opacity: 0;}
-}
-@keyframes sparkle {
-  0%, 100% { opacity: 0; transform: scale(0.5); }
-  50% { opacity: 1; transform: scale(1.2); }
-}
-#message {
-  font-size: 1.6em;
-  color: #880e4f;
-  padding: 20px;
-  line-height: 2em;
-  max-width: 90%;
-  animation: fadeIn 3s ease-in;
-}
-.heart {
-  font-size: 2em;
-  color: #f06292;
-  animation: pulse 2s infinite;
-  margin-top: 20px;
-}
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.stars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  pointer-events: none;
-}
-@keyframes twinkle {
-  0% { opacity: 0.3; transform: scale(1); }
-  100% { opacity: 1; transform: scale(1.3); }
-}
-.btn-container {
-  margin-top: 30px;
-}
-.btn {
-  background-color: #ec407a;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  margin: 10px;
-  border-radius: 30px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.3s;
-  box-shadow: 0 4px 12px rgba(236, 64, 122, 0.4);
-}
-.btn:hover {
-  background-color: #d81b60;
-}
-.footer-text {
-  font-size: 0.8em;
-  color: #6a1b9a;
-  margin-top: 30px;
-}
-
+    @import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Amiri', serif;
+      background: linear-gradient(to top left, #ffdde1, #f8cdda);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+      position: relative;
+    }
+    h1 {
+      font-size: 2em;
+      color: #c2185b;
+      margin-bottom: 0.5em;
+    }
+    .date-text {
+      font-size: 2.5em;
+      color: #ffffff;
+      background: linear-gradient(145deg, #f06292, #ec407a);
+      padding: 20px 30px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(240, 98, 146, 0.5);
+      margin: 15px 0;
+    }
+    .message {
+      font-size: 1.5em;
+      color: #880e4f;
+      padding: 20px;
+      line-height: 2em;
+      animation: fadeIn 3s ease-in;
+    }
+    .heart {
+      font-size: 2em;
+      color: #f06292;
+      animation: pulse 2s infinite;
+      margin-top: 10px;
+    }
+    .confetti, .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .confetti {
+      background-color: #e91e63;
+      animation: fall 5s linear infinite;
+      top: 0;
+    }
+    .sparkle {
+      background: white;
+      animation: sparkle 2s infinite;
+    }
+    @keyframes fall {
+      0% {transform: translateY(0); opacity: 1;}
+      100% {transform: translateY(100vh); opacity: 0;}
+    }
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
-  <h1>متبقي على اليوم الذي أنيرت فيه الأرض</h1>
-  <div id="countdown">00:00:00</div>
-  <div class="heart">❤️</div>
-  <div class="stars"></div>
-  <div class="btn-container">
-    <button class="btn" onclick="alert('مافي شيء يحمس 🤩 بس سويت لك الموقع بكل حب ❤️')">اضغطي هنا لو كنتي متحمسة!</button>
-    <button class="btn" onclick="alert('❤️افففف كم احبككككككك يابعد عمري')">المعلومة السرية</button>
+  <h1>اليوم الذي أنيرت فيه الأرض</h1>
+  <div class="date-text">25 أبريل</div>
+  <div class="message">
+    والله احبككككككك بس مرة ثانية لا تمزحييي كذااا ❤️<br>
+    سنةةة حلووووة يابعد عمريي ❤️
   </div>
-  <div class="footer-text">لاتنسي أن ترجعي بيوم ميلادك</div>  <audio id="bg-music" autoplay loop>
+  <div class="heart">❤️</div>
+
+  <audio id="bg-music" autoplay loop>
     <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c9c3d8f00e.mp3?filename=romantic-piano-110653.mp3" type="audio/mpeg">
   </audio>
-  <audio id="final-music">
-    <source src="https://cdn.pixabay.com/download/audio/2022/07/26/audio_daf86f5396.mp3?filename=emotional-piano-ambient-116199.mp3" type="audio/mpeg">
-  </audio>  <script>
-    const now = new Date();
-    const target = new Date();
-    target.setUTCHours(23);
-    target.setUTCMinutes(0);
-    target.setUTCSeconds(0);
-    target.setUTCMilliseconds(0);
 
-    if (now >= target) {
-      target.setUTCDate(target.getUTCDate() + 1);
-    }
-
-    function updateCountdown() {
-      const now = new Date();
-      const distance = target - now;
-
-      if (distance <= 0) {
-        document.body.innerHTML = '<div id="message">والله احبككككككك بس مرة ثانية لاتمزحي معي كذا ، سنة سعيدة ان شاء الله ياروحي ❤️</div>';
-        document.getElementById("final-music").play();
-        return;
-      }
-
-      const hours = String(Math.floor((distance / (1000 * 60 * 60)) % 24)).padStart(2, '0');
-      const minutes = String(Math.floor((distance / (1000 * 60)) % 60)).padStart(2, '0');
-      const seconds = String(Math.floor((distance / 1000) % 60)).padStart(2, '0');
-
-      document.getElementById("countdown").innerHTML = `${hours}:${minutes}:${seconds}`;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-
+  <script>
+    // confetti from top
     for (let i = 0; i < 100; i++) {
       const confetti = document.createElement("div");
       confetti.classList.add("confetti");
@@ -172,6 +104,7 @@ h1 {
       document.body.appendChild(confetti);
     }
 
+    // sparkles
     for (let i = 0; i < 50; i++) {
       const sparkle = document.createElement("div");
       sparkle.classList.add("sparkle");
@@ -180,5 +113,6 @@ h1 {
       sparkle.style.animationDelay = (Math.random() * 5) + "s";
       document.body.appendChild(sparkle);
     }
-  </script></body>
+  </script>
+</body>
 </html>
